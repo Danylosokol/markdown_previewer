@@ -17,10 +17,8 @@ class App extends React.Component{
   }
 
   processMarkdown(event){
-    // let md = new MarkdownIt();
     this.setState({
       markdown: event.target.value,
-      // text: md.render(this.state.markdown),
     });
   }
 
