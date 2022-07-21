@@ -1,3 +1,9 @@
+$background: #040f0f;
+$accent-background: #2d3a3a;
+$accent-color: #16db65;
+$border-radius: .5rem;
+$accent-font: 'Roboto Mono', monospace;
+
 *,
 *::after,
 *::before{
@@ -6,32 +12,32 @@
 }
 
 body{
+  background-color: $background;
   color: #1f1e1e;
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
-  background-color: #040f0f;
 }
 
 #root{
-  width: 75vw;
   margin: 0 auto;
+  width: 75vw;
 }
 
 #editor,
 #preview{
-  width: 100%;
-  overflow: scroll;
-  height: calc(100% - 3rem);
   background-color: #f3eff5;
+  height: calc(100% - 3rem);
+  overflow: scroll;
   padding: .5rem;
+  width: 100%;
 }
 
 #editor{
-  font-family: 'Roboto Mono', monospace;
-  outline: none;
   border: none;
+  font-family: $accent-font;
+  outline: none;
 }
 
 #preview{
@@ -44,11 +50,11 @@ body{
   }
   pre,
   code{
-    background-color: #2d3a3a;
+    background-color: $accent-background;
+    border-radius: $border-radius;
     color: #f3eff5;
-    padding: .25rem;
-    border-radius: .5rem;
     overflow: scroll;
+    padding: .25rem;
   }
   table, th, td{
     border: 1px solid #000;
@@ -61,25 +67,25 @@ body{
     background-color: #E7E9EB;
   }
   blockquote{
-    border-left: .2rem solid #040f0f;
+    background-color: #E7E9EB;
+    border-left: .2rem solid $background;
     margin-left: 1rem;
     margin-right: 0;
     padding: .25rem .5rem;
-    background-color: #E7E9EB;
   }
 }
 
 .header{
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 700;
   align-items: center;
-  padding: 0 1rem;
-  background-color: #2d3a3a;
-  color: #16db65;
+  background-color: $accent-background;
+  border-bottom: .1rem solid $accent-color;
+  color: $accent-color;
+  display: flex;
+  font-family: $accent-font;
+  font-weight: 700;
   height: 3rem;
-  border-bottom: .1rem solid #16db65;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .fa-free-code-camp{
@@ -88,9 +94,9 @@ body{
 
 .regular,
 .fullScreen {
+  border-radius: $border-radius;
   margin-top: 2rem;
   overflow: hidden;
-  border-radius: .5rem;
 }
 
 .regular{
